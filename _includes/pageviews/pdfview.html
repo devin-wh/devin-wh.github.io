@@ -1,0 +1,25 @@
+<iframe src="{{ include.path }}" width="100%" height="600px" frameborder="0"></iframe>
+
+
+<div id="pdf-container"></div>
+<script>
+var url = 'commons/pdf/RISC-V-ISA-Chinese.pdf';
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdf.worker.js';
+pdfjsLib.getDocument(url).promise.then(function(pdf) {
+    pdf.getPage(1).then(function(page) {
+        var scale = 1.5;
+        var viewport = page.getViewport({ scale: scale });
+        var canvas = document.createElement('canvas');
+        var context = canvas.getContext('2d');
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        var renderContext = {
+            canvasContext: context,
+            viewport: viewport
+        };
+        page.render(renderContext);
+        document.getElementById('pdf-container').appendChild(canvas);
+    });
+});
+</script>
