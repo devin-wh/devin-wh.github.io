@@ -1,5 +1,5 @@
 ---
-title: Linux Develop Document "01 driver and driver probe"
+title: "Linux Develop Document 01:  driver and driver probe"
 author: Devin
 date: 2024-06-16 09:37:00 +0800
 categories: [linux]
