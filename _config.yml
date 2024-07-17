@@ -14,9 +14,9 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: devin's space # the main title
+title: ziwen.zhang's space # the main title
 
-tagline: A code-focused blog space # it will display as the sub-title
+tagline: A code-focused personal blog space # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
